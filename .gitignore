@@ -1,0 +1,31 @@
+﻿# Build directories
+/bin/
+/obj/
+/output/
+/output/Logs/
+/output/Reports/
+/output/Binaries/
+TestResults/
+
+# NuGet packages
+packages/
+*.nupkg
+
+# IDE specific
+.vscode/
+.idea/
+.DS_Store
+
+# Temp files
+*.tmp
+*.log
+*.cache
+*.pdb
+*.lock
+
+# Compiled files
+*.dll
+*.exe
+*.so
+*.dylib
+*.generated.cs
