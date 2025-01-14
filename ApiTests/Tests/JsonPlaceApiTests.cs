@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace ApiTests.Tests;
 
 [TestFixture]
-public class JsonPApiTests : BaseTest {
+public class JsonPlaceApiTests : BaseTest {
     [Test]
     [Category("API")]
     [Category("Smoke")]
