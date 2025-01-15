@@ -30,4 +30,4 @@ packages/
 *.dylib
 *.generated.cs
 
-.user
+*.user
