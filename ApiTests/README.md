@@ -30,7 +30,7 @@ Execute command in the **ApiTests** folder
 
 * run a single test:
    ```bash
-   dotnet test --filter FullyQualifiedName=RestApiTests.JsonPlaceApiTests.GetReturnsPostsArrayTest
+   dotnet test --filter FullyQualifiedName=RestApiTests.Tests.JsonPlaceApiTests.GetReturnsPostsArrayTest
    ```
 
 * run desired groups/tags:

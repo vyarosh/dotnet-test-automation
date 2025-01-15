@@ -29,3 +29,5 @@ packages/
 *.so
 *.dylib
 *.generated.cs
+
+.user
