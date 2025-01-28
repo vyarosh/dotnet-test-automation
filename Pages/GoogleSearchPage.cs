@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Collections.ObjectModel;
+using NUnit.Framework;
 using OpenQA.Selenium;
 
 namespace UiTests.Pages;
@@ -36,6 +37,13 @@ public class GoogleSearchPage : BasePage
         WaitForElementClickable(ButtonGoogleSearch).Click();
         WaitForElementVisible(ContainerSearchResults);
     }
+    
+    public ReadOnlyCollection<IWebElement> ScrapeLinksWithText(string query)
+    {
+        Logger.Info($"Entering search query: {query}...");
+        return Driver.FindElements(By.XPath($"//a[contains(text(), '{query}')]"));
+    }
+    
 
     /// <summary>
     /// Clicks on the Prometheus "Contact Us" link in the search results.

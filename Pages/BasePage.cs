@@ -10,7 +10,7 @@ namespace UiTests.Pages;
 public abstract class BasePage
 {
     protected readonly Logger Logger = LogManager.GetCurrentClassLogger();
-    protected static IWebDriver Driver = null!;
+    public IWebDriver Driver = null!;
     private readonly WebDriverWait _wait;
     private static readonly int DEFAULT_WAIT = 30;
     
@@ -65,5 +65,12 @@ public abstract class BasePage
             Logger.Info($"Waiting({timeoutSeconds}s) for element to be clickable: {locator}...");
             return new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutSeconds))
                 .Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(locator));
+        }
+        
+        public IWebElement WaitForElementClickable(IWebElement elem, int timeoutSeconds)
+        {
+            Logger.Info($"Waiting({timeoutSeconds}s) for element to be clickable: {elem}...");
+            return new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutSeconds))
+                .Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(elem));
         }
 }
